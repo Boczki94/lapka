@@ -1,0 +1,327 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+}
+
+.logo {
+    width: 140px;
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: whitesmoke;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    transform: translateX(100%);
+    list-style-type: none;
+}
+
+.menu.active {
+    transform: translateX(0);
+    position: fixed;
+}
+
+.rozwijanie {
+    height: 3.4rem;
+    width: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active {
+    z-index: 10;
+    position: fixed;
+    right: 30px;
+}
+
+.rozwijanie span {
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 0.5rem;
+    background: gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active > span:nth-child(1) {
+    transform: rotate(-45deg) translateY(0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active > span:nth-child(2) {
+    transform: rotate(45deg) translateY(-0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active > span:nth-child(3) {
+    transform: translateX(100vw);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+#onas {
+    display: flex;
+    width: 100%;
+    background-image: url("Images/Onastlo.jpg");
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: darken;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #D25210;
+}
+
+#all {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.tekst {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0px 5px;
+}
+
+#uwaga {
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px 5px;
+}
+
+#img {
+    width: 340px;
+    height: 300px;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+}
+
+footer {
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+#footer-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#img-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#img-footer {
+    width: 150px;
+    height: 150px;
+}
+
+footer ul li {
+    text-align: center;
+    font-size: 18px;
+    list-style: none;
+}
+
+#links-footer {
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+#h3-footer {
+    font-size: 22px;
+    text-align: center;
+}
+
+.footer-kontakt {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#footer-tel {
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        width: 170px;
+    }
+
+    #onas {
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 90px;
+    }
+
+    #all {
+        margin-top: 70px;
+    }
+
+    .tekst {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    #uwaga {
+        font-size: 40px;
+        margin: 50px 0px;
+    }
+
+    #img {
+        width: 700px;
+        height: 550px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .rozwijanie {
+        display: none;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .menu {
+        position: unset;
+        background: inherit;
+        list-style: none;
+        flex-direction: row;
+        height: inherit;
+        width: max-content;
+        gap: 5rem;
+        font-size: 1.2rem;
+        align-items: center;
+        transform: translateX(0);
+        display: flex;
+    }
+
+    .menu-link {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-link::after {
+        content: '';
+        width: 0%;
+        height: 0.2rem;
+        background: gray;
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        border-radius: 2rem;
+        transition: all 0.2s;
+    }
+
+    .menu-link:hover::after {
+        width: 100%;
+    }
+
+    #onas {
+        height: 350px;
+    }
+
+    #footer-all {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 40px;
+    }
+
+    footer ul li{
+        text-align: left;
+        background: url(images/footer-dot.png) left no-repeat;
+        padding: 6px 0px 7px 12px;
+    }
+
+    #h3-footer {
+        text-align: left;
+    }
+
+    #img-footer {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    #onas {
+        height: 500px;
+    }
+    h1 {
+        font-size: 110px;
+    }
+
+    .tekst {
+        padding-left: 50px;
+        width: 1200px;
+        margin-bottom: 40px;
+    }
+
+    #img {
+        width: 1250px;
+        height: 650px;
+    }
+}

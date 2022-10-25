@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+}
+
+.logo {
+    width: 140px;
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: whitesmoke;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    transform: translateX(100%);
+    list-style-type: none;
+}
+
+.menu.active {
+    transform: translateX(0);
+    position: fixed;
+}
+
+.rozwijanie {
+    height: 3.4rem;
+    width: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active {
+    z-index: 10;
+    position: fixed;
+    right: 30px;
+}
+
+.rozwijanie span {
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 0.5rem;
+    background: gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active > span:nth-child(1) {
+    transform: rotate(-45deg) translateY(0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active > span:nth-child(2) {
+    transform: rotate(45deg) translateY(-0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active > span:nth-child(3) {
+    transform: translateX(100vw);
+}
+
+.s1 {
+    width: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: whitesmoke;
+}
+
+.div1 {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    padding: 70px 20px;
+}
+
+.div2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tekst1 {
+    font-size: 50px;
+    color: #D25210;
+    font-weight: 600;
+}
+
+.divall1 {
+    flex-direction: column;
+    width: 320px;
+    margin-bottom: 50px;
+}
+
+.linkobraz {
+    width: 100%;
+}
+
+.imgall {
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+}
+
+.divall2 {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.imieall {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(70, 121, 19);
+    padding: 4px 10px;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+.plecall {
+    font-size: 25px;
+    font-weight: 600;
+    color: brown;
+}
+
+.infoall {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(122, 83, 35);
+    padding: 4px 10px;
+}
+
+#imgbolo {
+    background-image: url("Images/Bolo1.jpeg");
+}
+
+#imgborys {
+    background-image: url("Images/Borys1.jpeg");
+}
+
+#imgfado {
+    background-image: url("Images/Fado.jpeg");
+}
+
+#imglena {
+    background-image: url("Images/Lena2.jpg");
+}
+
+#imgloki {
+    background-image: url("Images/Loki2.jpeg");
+}
+
+#imgmaja {
+    background-image: url("Images/Maja2.jpeg");
+}
+
+#imgmarta {
+    background-image: url("Images/Marta1.jpg");
+}
+
+#imgmort {
+    background-image: url("Images/Mort3.jpeg");
+}
+
+#imgnosek {
+    background-image: url("Images/Nosek2.jpeg");
+}
+
+#imgrenia {
+    background-image: url("Images/Renia1.jpg");
+}
+
+#imgrock {
+    background-image: url("Images/Rock3.jpeg");
+}
+
+#imgsonia {
+    background-image: url("Images/Sonia2.jpeg");
+}
+
+footer {
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+#footer-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#img-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#img-footer {
+    width: 150px;
+    height: 150px;
+}
+
+footer ul li {
+    text-align: center;
+    font-size: 18px;
+    list-style: none;
+}
+
+#links-footer {
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+#h3-footer {
+    font-size: 22px;
+    text-align: center;
+}
+
+.footer-kontakt {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#footer-tel {
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        width: 170px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .rozwijanie {
+        display: none;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .menu {
+        position: unset;
+        background: inherit;
+        list-style: none;
+        flex-direction: row;
+        height: inherit;
+        width: max-content;
+        gap: 5rem;
+        font-size: 1.2rem;
+        align-items: center;
+        transform: translateX(0);
+        display: flex;
+    }
+
+    .menu-link {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-link::after {
+        content: '';
+        width: 0%;
+        height: 0.2rem;
+        background: gray;
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        border-radius: 2rem;
+        transition: all 0.2s;
+    }
+
+    .menu-link:hover::after {
+        width: 100%;
+    }
+
+    #footer-all {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 40px;
+    }
+
+    footer ul li{
+        text-align: left;
+        background: url(images/footer-dot.png) left no-repeat;
+        padding: 6px 0px 7px 12px;
+    }
+
+    #h3-footer {
+        text-align: left;
+    }
+
+    #img-footer {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+
+    .tekst1 {
+        font-size: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .divall1 {
+        width: 100%;
+    }
+}

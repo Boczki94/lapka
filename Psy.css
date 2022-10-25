@@ -1,0 +1,521 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+}
+
+.logo {
+    width: 140px;
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: whitesmoke;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    transform: translateX(100%);
+    list-style-type: none;
+}
+
+.menu.active1 {
+    transform: translateX(0);
+    position: fixed;
+}
+
+.rozwijanie {
+    height: 3.4rem;
+    width: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active1 {
+    z-index: 10;
+    position: fixed;
+    right: 30px;
+}
+
+.rozwijanie span {
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 0.5rem;
+    background: gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active1 > span:nth-child(1) {
+    transform: rotate(-45deg) translateY(0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active1 > span:nth-child(2) {
+    transform: rotate(45deg) translateY(-0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active1 > span:nth-child(3) {
+    transform: translateX(100vw);
+}
+
+section {
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 1100px;
+}
+
+#div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imie {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #D25210;
+    margin-top: 50px;
+}
+
+#div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+#galeria {
+    width: 340px;
+    height: 300px;
+}
+  
+#galeria #img-and-arrow {
+    width: 340px;
+    height: 250px;
+    overflow: hidden;
+}
+  
+#galeria #img-and-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#galeria .img {
+    display: none;
+    width: 100%;
+    flex: 1;
+}
+  
+#galeria .img.active {
+    display: block;
+}
+  
+#galeria #dotdiv {
+    display: flex;
+    justify-content: center;
+}
+  
+#dotall {
+    display: inline-flex;
+    padding: 5px 10px;
+    padding-right: 0;
+    border-radius: 2px;
+}
+  
+#dotall .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #3a3a3a;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+  
+.arrow {
+    margin: 0 5px;
+}
+  
+.arrow {
+    cursor: pointer;
+}
+
+.dot {
+    cursor: pointer;
+}
+
+#divtekst {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    width: 330px;
+    display: flex;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%)
+}
+
+#tekst {
+    font-size: 23px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#dane-innypies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#divdane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    gap: 30px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+}
+
+#plec {
+    display: flex;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 25px;
+    gap: 5px;
+}
+
+#wiek {
+    display: flex;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 25px;
+    gap: 5px;
+}
+
+#adoptuj {
+    padding: 20px 30px;
+    background-color: #D25210;
+    border-radius: 26px;
+    font-size: 25px;
+    color: bisque;
+    font-weight: 600;
+}
+
+#innediv {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#inne {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 16px 26px;
+    background-color: rgb(122, 83, 35);
+    color: white;
+    border-radius: 5px;
+}
+
+footer {
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+#footer-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#img-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#img-footer {
+    width: 150px;
+    height: 150px;
+}
+
+footer ul li {
+    text-align: center;
+    font-size: 18px;
+    list-style: none;
+}
+
+#links-footer {
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+#h3-footer {
+    font-size: 22px;
+    text-align: center;
+}
+
+.footer-kontakt {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#footer-tel {
+    margin-bottom: 50px;
+}
+
+
+
+@media only screen and (min-width: 768px) {   
+    .logo {
+        width: 170px;
+    }
+
+    #div2 {
+        flex-direction: row;
+        align-items: unset;
+    }
+
+    #divtekst {
+        width: 250px;
+        padding: 20px;
+    }
+
+    #galeria {
+        width: 380px;
+        height: 350px;
+    }
+
+    #galeria #img-and-arrow {
+        width: 380px;
+        height: 300px;
+    }
+
+    #dane-innypies {
+        flex-direction: row;
+        gap: 100px;
+        align-items: center;
+    }
+
+    #divdane {
+        width: 350px;
+    }
+
+    #innediv {
+        height: 70px;
+    }
+
+    #adoptuj {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .rozwijanie {
+        display: none;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .menu {
+        position: unset;
+        background: inherit;
+        list-style: none;
+        flex-direction: row;
+        height: inherit;
+        width: max-content;
+        gap: 5rem;
+        font-size: 1.2rem;
+        align-items: center;
+        transform: translateX(0);
+        display: flex;
+    }
+
+    .menu-link {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-link::after {
+        content: '';
+        width: 0%;
+        height: 0.2rem;
+        background: gray;
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        border-radius: 2rem;
+        transition: all 0.2s;
+    }
+
+    .menu-link:hover::after {
+        width: 100%;
+    }
+
+    #div2 {
+        align-items: center;
+    }
+
+    #galeria {
+        width: 480px;
+        height: 400px;
+    }
+
+    #galeria #img-and-arrow {
+        width: 480px;
+        height: 400px;
+    }
+    
+    #divtekst {
+        width: 330px;
+        justify-content: center;
+    }
+
+    #tekst {
+        font-size: 28px;
+    }
+
+    #dane-innypies {
+        gap: 30px;
+        margin-top: 70px;
+    }
+
+    #divdane {
+        flex-direction: row;
+        width: 600px;
+        height: 200px;
+        gap: 0;
+    }
+
+    #footer-all {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 40px;
+    }
+
+    footer ul li{
+        text-align: left;
+        background: url(images/footer-dot.png) left no-repeat;
+        padding: 6px 0px 7px 12px;
+    }
+
+    #h3-footer {
+        text-align: left;
+    }
+
+    #img-footer {
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+@media only screen and (min-width: 1300px) {
+    #div1 {
+        display: flex;
+        padding: 20px 20px;
+        max-width: 1300px;
+    }
+
+    #imie {
+        font-size: 60px;
+    }
+
+    #div2 {
+        gap: 50px;
+    }
+
+    #galeria #img-and-arrow {
+        width: 620px;
+        height: 520px;
+    }
+
+    #galeria {
+        width: 620px;
+        height: 520px;
+    }
+
+    #divtekst {
+        width: 450px;
+    }
+
+    #tekst {
+        justify-content: center;
+    }
+
+    #divdane {
+        width: 800px;
+        height: 250px;
+        gap: 40px;
+    }
+
+    #innediv {
+        height: auto;
+    }
+
+    #inne {
+        padding: 27px 53px;
+        font-size: 35px;
+    }
+}

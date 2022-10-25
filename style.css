@@ -1,0 +1,895 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+}
+
+.logo {
+    width: 140px;
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: whitesmoke;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    transform: translateX(100%);
+    list-style-type: none;
+}
+
+.menu.active {
+    transform: translateX(0);
+    position: fixed;
+}
+
+.rozwijanie {
+    height: 3.4rem;
+    width: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active {
+    z-index: 10;
+    position: fixed;
+    right: 30px;
+}
+
+.rozwijanie span {
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 0.5rem;
+    background: gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.rozwijanie.active > span:nth-child(1) {
+    transform: rotate(-45deg) translateY(0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active > span:nth-child(2) {
+    transform: rotate(45deg) translateY(-0.8rem);
+    width: 80%;
+}
+
+.rozwijanie.active > span:nth-child(3) {
+    transform: translateX(100vw);
+}
+
+.div1 {
+    width: 100vw;
+}
+
+.s1 {
+    background-image: url("Images/Tlo startowe.jpeg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+    display: flex;
+    text-align: center;
+}
+
+.tytuł {
+    font-size: 3.0rem;
+    color: #ABA216;
+    margin-top: 70px;
+}
+
+.roz {
+    margin: 30px 60px;
+    height: 2px;
+    background-color: gray;
+    border: none;
+    border-radius: 10%;
+}
+
+.tekst1 {
+    font-size: 2rem;
+    color: #ABA216;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.tekst2 {
+    display: none;
+}
+
+.guzik {
+    font-size: 50px;
+    color: bisque;
+    background: #D25210;
+    padding: 20px 30px;
+    border-radius: 26px;
+    border-color: #D25210;
+    border: none;
+}
+
+.tekst3 {
+    font-size: 30px;
+    color: red;
+    margin-top: 5rem;
+    margin-bottom: 50px;
+}
+
+.s2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: whitesmoke;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tekst4 {
+    font-size: 30px;
+    color: #ABA216;
+    margin-top: 30px;
+}
+
+.img1 {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.nazwa1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding: 1px 4px;
+    border-radius: 26px;
+    color: white;
+    text-decoration: none;
+    background-color: #8bc34a;
+}
+ 
+.guzik2 {
+    font-size: 30px;
+    color: bisque;
+    background: #D25210;
+    padding: 20px 30px;
+    border-radius: 26px;
+    border-color: #D25210;
+    border: none;
+    margin: 30px auto 15px auto;
+}
+
+.s3 {
+    background: whitesmoke;
+    background-size: cover;
+    min-height: 500px;
+    min-width: 100vw;
+    display: flex;
+}
+
+.div4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div5 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tekst5 {
+    font-size: 30px;
+    color: #ABA216;
+    margin-top: 30px;
+}
+
+.roz2 {
+    margin: 30px 60px;
+    padding: 2px 80px;
+    background-color: gray;
+    border: none;
+    border-radius: 26px;
+}
+
+.tekst6 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+
+.ul1 {
+    list-style: none;
+    color: #D25210;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px auto 20px auto;
+}
+
+.li1 {
+    margin-bottom: 15px;
+}
+
+.img2 {
+    display: none;
+}
+
+.guzik3 {
+    font-size: 30px;
+    color: bisque;
+    background: #D25210;
+    padding: 20px 30px;
+    border-radius: 26px;
+    border-color: #D25210;
+    border: none;
+    margin: 30px auto 15px auto;
+}
+
+.s4 {
+    display: flex;
+    background-image: url("Images/Przynies-jedzenie.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+    min-width: 100vw;
+    align-items: center;
+    text-align: center;
+}
+
+.div7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 15px auto;
+}
+
+.div8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tekst7 {
+    font-size: 25px;
+    margin: 20px auto 20px auto;
+}
+
+.tekst8 {
+    font-size: 18px;
+    margin: 20px auto 20px auto;
+}
+
+.roz3 {
+    margin: 20px 60px;
+    padding: 2px 80px;
+    background-color: gray;
+    border: none;
+    border-radius: 26px;
+}
+
+.tekst9 {
+    font-size: 20px;
+}
+
+.tekst10 {
+    font-size: 15px;
+    margin: 4px auto 4px auto;
+}
+
+.s5 {
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(118,166,92,1) 34%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div10 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.div11 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.prasch {
+    font-size: 30px;
+    width: 230px;
+    height: 80px;
+    border-radius: 26px;
+    border: none;
+    margin: 15px auto 15px auto;
+    text-align: center;
+    background: #1f99d6;
+    padding: 5px 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.div12 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tekst11 {
+    font-size: 25px;
+    color: black;
+}
+
+#guzik4 {
+    background: #1f99d6;
+    color: white;
+}
+
+#guzik5 {
+    background: #C8363F;
+    color: white;
+}
+
+#guzik6 {
+    background: #633fbb;
+    color: white;
+}
+
+footer {
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+#footer-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#img-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#img-footer {
+    width: 150px;
+    height: 150px;
+}
+
+footer ul li {
+    text-align: center;
+    font-size: 18px;
+    list-style: none;
+}
+
+#links-footer {
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+#h3-footer {
+    font-size: 22px;
+    text-align: center;
+}
+
+.footer-kontakt {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#footer-tel {
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        width: 170px;
+    }
+    .tytuł {
+        font-size: 4rem;
+    }
+
+    .tekst1 {
+        font-size: 3rem;
+    }
+
+    .guzik {
+        font-size: 60px;
+        margin-top: 60px;
+    }
+
+    .tekst3 {
+        font-size: 40px;
+        margin: 7rem 7rem;
+    }
+
+    .tekst4 {
+        font-size: 40px;
+    }
+
+    .img1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .nazwa1 {
+        font-size: 35px;
+    }
+
+    .s3 {
+        min-height: 600px;
+    }
+
+    .tekst5 {
+        font-size: 40px;
+    }
+
+    .tekst6 {
+        font-size: 30px;
+    }
+
+    .ul1 {
+        font-size: 20px;
+    }
+
+    .li1 {
+        margin-bottom: 20px;
+    }
+
+    .guzik2 {
+        padding: 25px 40px;
+    }
+
+    .guzik3 {
+        padding: 25px 40px;
+    }
+
+    .tekst7 {
+        font-size: 35px;
+    }
+
+    .roz3 {
+        padding: 2px 160px;
+    }
+
+    .tekst8 {
+        font-size: 30px;
+    }
+
+    .tekst9 {
+        font-size: 25px;
+    }
+
+    .tekst10 {
+        font-size: 20px;
+        margin: 5px auto 5px auto;
+    }
+    .div7 {
+        margin: 20px auto;
+    }
+
+    .s5 {
+        min-height: 300px;
+    }
+
+    .div10 {
+        gap: 30px;
+    }
+
+    .tekst11 {
+        font-size: 45px;
+    }
+
+    .div11 {
+        flex-direction: row;
+    }
+}
+
+/* DESKTOP MENU */
+
+@media only screen and (min-width: 1024px) {
+    .rozwijanie {
+        display: none;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .menu {
+        position: unset;
+        background: inherit;
+        list-style: none;
+        flex-direction: row;
+        height: inherit;
+        width: max-content;
+        gap: 5rem;
+        font-size: 1.2rem;
+        align-items: center;
+        transform: translateX(0);
+        display: flex;
+    }
+
+    .menu-link {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-link::after {
+        content: '';
+        width: 0%;
+        height: 0.2rem;
+        background: gray;
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        border-radius: 2rem;
+        transition: all 0.2s;
+    }
+
+    .menu-link:hover::after {
+        width: 100%;
+    }
+
+    .div1 {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 7%;
+        position: relative;
+    }
+
+    .tytuł {
+        text-align: left;
+        font-size: 80px;;
+    }
+
+    .roz {
+        width: 450px;
+        padding: 2px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 40px;
+    }
+
+    .tekst1 {
+        text-align: left;
+        margin-top: 30px;
+        font-size: 60px;
+    }
+
+    .tekst2 {
+        display: flex;
+        font-size: 30px;
+        color: white;
+        text-align: left;
+        width: 400px;
+        height: 180px;
+    }
+    .guzik {
+        cursor: pointer;
+        margin-left: 8%;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        width: 350px;
+        height: 120px;
+        transition: background-color 0.5s, color 0.5s;
+    }
+
+    .guzik:hover {
+        background-color: #624E54;
+        color: white;
+    }
+
+    .tekst3 {
+        font-size: 36px;
+        position: absolute;
+        right: 7%;
+        bottom: 50px;
+        margin: 0;
+        width: 390px;
+        height: 280px;
+    }
+
+    .s2 {
+        min-height: 600px;
+    }
+
+    .div3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: justify;
+        width: 1000px;
+    }
+
+    .tekst4 {
+        font-size: 60px;
+    }
+
+    .img1 {
+        width: 300px;
+        height: 300px;
+        transform: scale(1);
+        transition: transform 0.5s, color 0.5s;
+    }
+
+    .img1:hover {
+        transform: scale(1.05);
+    }
+
+    .nazwa1 {
+        margin-top: 3px;
+        padding: 2px 6px;
+    }
+
+    .guzik2 {
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.5s;
+    }
+
+    .guzik2:hover {
+        background-color: #624E54;
+        color: white;
+    }
+
+    .s3 {
+        height: 700px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .div4 {
+        display: flex;
+        align-items: center;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    .div5 {
+        align-items: flex-start;
+    }
+
+    .tekst5 {
+        font-size: 50px;
+    }
+
+    .roz2 {
+        width: 400px;
+        margin-left: 0;
+    }
+
+    .tekst6 {
+        text-align: left;
+        margin-left: 0;
+        font-size: 20px;
+        width: 400px;
+    }
+
+    .ul1 {
+        margin-left: 0;
+    }
+
+    .guzik3 {
+        margin-left: 80px;
+        margin-right: 0;
+        transition: background-color 0.5s, color 0.5s;
+    }
+
+    .guzik3:hover {
+        background-color: #624E54;
+        color: white;
+    }
+
+    .div6 {
+        display: flex;
+    }
+
+    .img2 {
+        display: flex;
+        width: 400px;
+        height: 400px;
+
+    }
+
+    .s4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+    }
+
+    .div7 {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+        margin: 30px 7%;
+    }
+
+    .div8 {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .tekst7 {
+        width: 550px;
+        margin: 20px 0;
+    }
+
+    .roz3 {
+        margin-left: 0;
+    }
+    
+    .tekst8 {
+        width: 600px;
+    }
+
+    .tekst9 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .tekst10 {
+        font-size: 25px;
+    }
+
+    .tekst11 {
+        font-size: 60px;
+    }
+
+    .s5 {
+        align-items: center;
+    }
+
+    .div10 {
+        width: 1024px;
+    }
+
+    .div11 {
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+    }
+
+    #footer-all {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 40px;
+    }
+
+    footer ul li{
+        text-align: left;
+        background: url(images/footer-dot.png) left no-repeat;
+        padding: 6px 0px 7px 12px;
+    }
+
+    #h3-footer {
+        text-align: left;
+    }
+
+    #img-footer {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .s1 {
+        min-height: 1000px;
+    }
+
+    .s3 {
+        height: 800px;
+    }
+
+    .div4 {
+        width: 1200px;
+    }
+    
+    .img2 {
+        width: 550px;
+        height: 550px;
+    }
+
+    .tekst5 {
+        font-size: 60px;
+    }
+
+    .tekst6 {
+        font-size: 25px;
+        width: 500px;
+    }
+
+    .div7 {
+        width: 1200px;
+    }
+
+    .s5 {
+        height: 400px;
+    }
+
+    .div12 {
+        margin-bottom: 50px;
+    }
+
+    .prasch {
+        font-size: 30px;
+        width: 250px;
+        height: 100px;
+        padding: 15px 18px;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+
+    .tekst3 {
+        margin-top: 25px;
+    }
+
+}
